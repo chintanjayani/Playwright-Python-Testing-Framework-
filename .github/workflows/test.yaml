@@ -26,10 +26,6 @@ jobs:
           npm install -g artillery
           npm install puppeteer axe-core @axe-core/puppeteer
 
-      - name: Run Accessiblity Tests
-        run: |
-          node tests/accessiblity/accessibility-test.js
-          
       - name: Run tests
         run: |
           pytest --html=reports/report.html
@@ -38,8 +34,10 @@ jobs:
       - name: Run Artillery Performance Tests
         run: |
           artillery run tests/performance\ /performance-test.yaml 
-
       
+      - name: Run Accessiblity Tests
+        run: |
+          node tests/accessiblity/accessibility-test.js
 
       - name: Upload test results
         uses: actions/upload-artifact@v3
