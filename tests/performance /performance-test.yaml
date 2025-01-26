@@ -1,0 +1,15 @@
+config:
+  target: "https://automationintesting.online"
+  phases:
+    - duration: 30            # Test duration in seconds (30 sec as running in pipeline)
+      arrivalRate: 100         # Requests per second (100 RPS)
+  defaults:
+    headers:
+      Accept: "application/json"
+      Content-Type: "application/json"
+scenarios:
+  - flow:
+      - get:
+          url: "/room"
+          expect:
+            - statusCode: 200

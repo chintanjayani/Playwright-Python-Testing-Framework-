@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@axe-core/puppeteer": "^4.10.1",
+    "artillery": "^2.0.21",
+    "axe-core": "^4.10.2",
+    "puppeteer": "^24.1.1"
+  }
+}
